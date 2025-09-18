@@ -88,3 +88,22 @@
     font-size: 38px;
   }
 }
+
+/* ------Соціальні мережі----------- */
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.social__item {
+}
+.social__link {
+  text-transform: uppercase;
+  transform: color 0.3s;
+}
+
+.social__link:hover {
+  color: var(--text-primary);
+}
