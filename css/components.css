@@ -96,10 +96,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 10px 30px;
 }
 .social__item {
 }
 .social__link {
+  font-size: 14px;
+  line-height: 1.2;
   text-transform: uppercase;
   transform: color 0.3s;
 }
