@@ -26,6 +26,13 @@ body {
   margin: 0 auto;
 }
 
+/* ====== Page ============= */
+
+.page {
+}
+.page__hero {
+}
+
 /* ---------Header------------ */
 
 .header {
@@ -248,4 +255,41 @@ body {
   .menu__body::before {
     height: 53px;
   }
+}
+
+/* ========== Hero ============== */
+
+.hero {
+}
+.hero__container {
+}
+.hero__content {
+}
+.hero__title {
+}
+.hero-sub-title {
+}
+.hero__author {
+}
+.author {
+}
+.author__picture {
+}
+.author__image {
+}
+.author__caption {
+}
+.author__action {
+}
+.hero__media {
+}
+.hero__image {
+}
+.hero__scroll {
+}
+.scroll__hero {
+}
+.scroll-hero__arrow {
+}
+.scroll-hero__label {
 }
