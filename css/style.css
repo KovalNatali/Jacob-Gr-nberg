@@ -36,12 +36,26 @@ body {
 /* ---------Header------------ */
 
 .header {
-  padding-top: 50px;
+  position: sticky;
+  top: 0;
+  padding-block: 50px;
   padding-inline: 40px;
   display: flex;
   gap: 15px;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
+}
+
+.header::before {
+  content: "";
+  height: 123px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: hsla(0, 0%, 100%, 0.285);
 }
 
 .header__logo {
@@ -51,6 +65,7 @@ body {
   line-height: 1.1;
   text-transform: uppercase;
   transition: color 0.3s;
+  pointer-events: all;
 }
 
 .header__logo:hover {
@@ -61,6 +76,7 @@ body {
 }
 
 .menu {
+  pointer-events: all;
 }
 
 .menu__icon {
@@ -68,6 +84,7 @@ body {
   width: 50px;
   height: 23px;
   position: relative;
+  pointer-events: all;
 }
 
 .menu__icon::before,
@@ -158,21 +175,21 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
-  background-color: rgba(225, 225, 225, 0.8);
+  background-color: rgba(248, 244, 244, 0.972);
 }
 
-.menu__body::before {
+/* .menu__body::before {
   content: "";
   height: 123px;
   position: fixed;
   right: 0;
   top: 0;
-  visibility: hidden;
   width: 100%;
+  visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
   background-color: hsla(0, 0%, 100%, 0.285);
-}
+} */
 
 .menu-open .menu__body,
 .menu-open .menu__body::before {
@@ -181,7 +198,8 @@ body {
 }
 
 .menu__list {
-  padding-block: 70px;
+  padding-top: 110px;
+  padding-bottom: 70px;
   flex-grow: 1;
   display: flex;
   gap: 40px;
@@ -225,6 +243,9 @@ body {
   .header {
     padding-top: 30px;
   }
+  .header::before {
+    height: 83px;
+  }
   .menu__link {
     font-size: 70px;
   }
@@ -233,9 +254,6 @@ body {
   }
   .menu__item {
     gap: 30px;
-  }
-  .menu__body::before {
-    height: 83px;
   }
 }
 
@@ -252,20 +270,23 @@ body {
   .menu__list {
     gap: 15px;
   }
-  .menu__body::before {
-    height: 53px;
-  }
 }
 
 /* ========== Hero ============== */
 
 .hero {
+  padding-top: 24px;
 }
 .hero__container {
+  display: grid;
+  grid-template-columns: 0.4632fr 0.5368fr;
 }
 .hero__content {
 }
 .hero__title {
+  font-size: 200px;
+  line-height: 0.9;
+  color: var(--text-primary);
 }
 .hero-sub-title {
 }
