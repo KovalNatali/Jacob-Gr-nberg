@@ -33,6 +33,8 @@ body {
 .page__hero {
 }
 
+.page__services {
+}
 /* ---------Header------------ */
 
 .header {
@@ -71,9 +73,6 @@ body {
 
 .header__logo:hover {
   color: var(--text-primary);
-}
-
-.header__menu {
 }
 
 .menu {
@@ -272,12 +271,8 @@ body {
 }
 .hero__content {
   padding-top: 77px;
-
   position: relative;
   flex-basis: 67.428571%;
-
-  /* flex-basis: 46.32%;
-  margin-right: -21.214286%; */
 }
 
 .hero__header {
@@ -388,9 +383,6 @@ body {
   width: 160px;
   left: 10px;
   top: -10px;
-}
-
-.hero__scroll {
 }
 
 .scroll__hero {
@@ -522,4 +514,26 @@ body {
   .author__image {
     width: 150px;
   }
+}
+/* ========Services======== */
+
+.services {
+}
+.services__container {
+  max-width: 1230px;
+  display: flex;
+  gap: 20px;
+}
+.services__title {
+  flex: 1 1 380px;
+  padding-left: 11.707317%; /* 144/1230 */
+}
+.services__list {
+  flex: 1 1 800px;
+}
+.services__item {
+}
+.services__name {
+}
+.services__description {
 }
