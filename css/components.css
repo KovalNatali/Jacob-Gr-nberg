@@ -42,18 +42,27 @@
 .arrow-link--left svg {
   rotate: 180deg;
 }
-
-.arrow-link path {
-  stroke: var(--text-default);
-}
-
 .arrow-link:hover {
   color: var(--text-primary);
 }
-
 .arrow-link:hover path {
   transition: stroke 0.3s;
   stroke: var(--text-primary);
+}
+.arrow-link path {
+  stroke: var(--text-primary);
+}
+.arrow-link--dark {
+  color: var(--text-primary);
+}
+.arrow-link--dark path {
+  stroke: var(--text-primary);
+}
+.arrow-link--dark:hover path {
+  stroke: var(--text-default);
+}
+.arrow-link--dark:hover {
+  color: var(--text-default);
 }
 
 /* <!-- Заголовок секції --> */

@@ -687,45 +687,119 @@ body {
 }
 .latest-work__block-header {
 }
-.latest-work__block-header.hero__title:not(:last-child) {
+.latest-work__block-header:not(:last-child) {
   margin-bottom: 128px;
 }
 
 .latest-work__items {
   display: flex;
-  gap: 150px;
+  gap: 10.590048%; /* 151/1430 */
 }
 
 .latest-work__colum {
+  display: flex;
+  flex-direction: column;
+  row-gap: 128px;
 }
-.latest-work__colum:first-child {
-  flex: 1 1 700px;
+
+.latest-work__colum:first-child .item-work:nth-child(even) {
+  align-self: center;
 }
-.latest-work__colum:last-child {
-  flex: 1 1 550px;
+.latest-work__colum:last-child .item-work:nth-child(odd) {
+  align-self: flex-end;
 }
 
 .latest-work__item {
 }
 .item-work {
 }
+
 .item-work__link {
+  transition: color 0.3s;
+}
+.item-work__link:hover {
+  color: var(--text-primary);
+}
+
+.item-work__link:hover .item-work__image {
+  scale: 1.01;
 }
 .latest-work__title {
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
 }
-.latest-work__title:not(:last-child) {
-  margin-bottom: 12px;
-}
+
 .latest-work__title span {
   text-transform: none;
   color: var(--text-primary);
+}
+.latest-work__title:not(:last-child) {
+  margin-bottom: 12px;
 }
 .item-work__media {
 }
 .item-work__image {
 }
 .item-work__caption {
+  padding: top 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1430px) {
+  .latest-work__block-header:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  .latest-work__colum {
+    row-gap: 80px;
+  }
+}
+@media (max-width: 991.98px) {
+  .latest-work__block-header:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .latest-work__colum {
+    row-gap: 50px;
+  }
+  .latest-work__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767.98px) {
+  .latest-work__block-header:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .latest-work__colum {
+    row-gap: 20px;
+  }
+  .latest-work__title {
+    font-size: 20px;
+  }
+}
+
+/* ----- прокрутка горизонтально------- */
+@media (max-width: 599.98px) {
+  .latest-work__items {
+    overflow: auto;
+    margin-inline: -15px;
+    align-items: flex-start;
+  }
+  .latest-work__colum {
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: flex-start;
+  }
+  .item-work {
+    flex: 0 0 250px;
+  }
+}
+/* ----------------------- */
+
+@media (min-width: 600px) {
+  .latest-work__colum:first-child {
+    flex: 1 1 700px;
+  }
+  .latest-work__colum:last-child {
+    flex: 1 1 550px;
+  }
 }
