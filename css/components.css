@@ -72,6 +72,7 @@
 }
 
 .block-header_title span {
+  text-transform: none;
   color: var(--text-primary);
 }
 .block-header_link {
